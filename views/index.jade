@@ -1,0 +1,69 @@
+extends layout
+
+block content
+  #home
+    #header
+      .container
+        a(href="/")
+          img#logo-blue(src="/img/logo-lg.png")
+        ul
+          li
+            a(href="#") Contact
+        img#logo-cl(src="/img/cl-clear.png")
+        h1 Web Development/Design & Branding <br>to increase your revenue
+        button.btn.btn-info.btn-lg#seeOurWork(href='#featuredworks') See Our Work
+    #bd
+      section#welcome
+        .container
+          h1 Welcome to Cavendish Labs
+            span.border
+          p.
+            Cavendish Labs is a contemporary branding and design studio based in St. Petersburg/Treasure Island, Florida. We specialise in branding, web design and digital marketing. When we undertake your project, you will benefit from direct and timely access to key decision makers at all times. We're an energetic and determined team driven by results, committed to helping your business succeed.
+      section#whatwedo
+        .container
+          h1 What We Do
+            span.border
+          .row
+            .col-md-3
+              img(src="/img/home-branding.png")
+              h2 Brand Identity
+              p.
+                We will conceptualise and create your identity with something 
+                that’s engaging, unique, relevant and consistent to best communicate your brand message.
+            .col-md-3
+              img(src="/img/home-web.png")
+              h2 Web Design
+              p.
+                A great design should effectively convey your brand values, 
+                communicate your message and compel visitors to do business with you. We've got it covered.
+            .col-md-3
+              img(src="/img/home-marketing.png")
+              h2 Digital Marketing
+              p.
+                Want more customers? You’re in safe hands. 
+                Let us help you attract more visitors to your website that want to become your customers.
+            .col-md-3
+              img(src="/img/home-design.png")
+              h2 Graphic Design
+              p.
+                Contemporary, fresh and brilliantly unique. Brochures, flyers, logos,
+                business cards and more. Are our graphics the best in town? We'll let you be the judge of that.
+      section#featuredworks
+        .container
+          h1 Featured Works
+            span.border
+          .row
+            .col-md-6
+              img(src="/img/laptop-reale.jpg")
+            .col-md-6
+              img(src="/img/laptop-rositobisani.jpg")
+          .row._2
+            .col-md-6
+              img(src="/img/laptop-savewaterproject.jpg")
+            .col-md-6
+              img(src="/img/laptop-chambersflooring.jpg")
+      section#contact-us
+        .container
+          h1 Start your project today
+          p Contact us now to start your project. We're as excited as you are!
+          button.btn.btn-lg Contact Us

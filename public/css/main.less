@@ -1,0 +1,184 @@
+@import "../js/libs/bootstrap/less/bootstrap.less";
+//@import "../js/libs/bootstrap/dist/css/bootstrap.css";
+@import "fonts.less";
+//@import "../fonts/icomoon/style.css";
+//@import (less) "../fonts/icons/style.css";
+//@import "bootstrap-compiled.less";
+
+@media (min-width: 1070px) {//992
+  .container {
+    max-width: 1050px;
+  }
+}
+
+/* ==========================================================================
+   Base tags 
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6  {
+  font-family: proximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  font-family: proximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@cavendishBlue: #27ccff;
+
+#home {
+  #header {
+    padding-top: 20px;
+    height: 500px;
+    width: 100%;
+    background: url('/img/bg.jpg') no-repeat top left;
+    ul {
+      .clearfix;
+      float: right;
+      list-style: none;
+      margin-top: 8px;
+    }
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      a {
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+    h1 {
+      color: @cavendishBlue;
+      color: #fff;
+      font-family: proximaNovaLight;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 38px;
+      clear: both;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    .btn {
+      background-color: @cavendishBlue;
+      color: #fff;
+      margin: 0 auto;
+      display: block;
+      margin-top: 40px;
+      padding: 15px 21px;
+      font-size: 24px;
+      border: @cavendishBlue;
+      &:hover {
+        background-color: #fff;
+        color: @cavendishBlue;
+      }
+    }
+    #logo-blue {
+      float: left;
+      width: 160px;
+      background: rgba(39,204,255, .5);
+      padding: 7px 10px;
+    }
+    #logo-cl {
+      clear: both;
+      display: block;
+      margin: 0 auto;
+      margin-top: 80px;
+    }
+  }
+  #bd {
+    h1 {
+      font-family: proximaNovaLight, sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      .border {
+        width: 10%;
+        height: 3px;
+        background: @cavendishBlue;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+    p {
+      font-size: 18px;
+      font-family: proximaNovaLight, sans-serif;
+    }
+    section {
+      padding: 80px 0;
+    }
+  }
+  #welcome {
+  }
+  #whatwedo {
+    background: url('/img/hand-dark.jpg') no-repeat center bottom;
+    background-size: cover;
+    h1 {
+      color: #fff;
+    }
+    .col-md-3 {
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      h2 {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+      }
+      p {
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+  #featuredworks {
+    margin-bottom: 70px;
+    h1 {
+      margin-bottom: 70px;
+    }
+    img {
+      width: 100%;
+    }
+    ._2 {
+      margin-top: 50px;
+    }
+  }
+  #contact-us {
+    background: @cavendishBlue;
+    color: #fff;
+    p {
+      text-align: center;
+    }
+    .btn {
+      background-color: @cavendishBlue;
+      color: #fff;
+      margin: 0 auto;
+      display: block;
+      margin-top: 40px;
+      padding: 15px 21px;
+      font-size: 24px;
+      border: 1px solid #fff;
+      &:hover {
+        background-color: #fff;
+        color: @cavendishBlue;
+      }
+    }
+  }
+}
+footer {
+  background-color: #333;
+  padding: 50px 0;
+  text-align: center;
+  .copyright {
+    color: #777e83;
+    //font-size: 12px;
+    clear: both;
+    padding-top: 15px;
+    border-top: 1px solid #3a3e40;
+    margin-top: 15px;
+  }
+  #logo-footer {
+    width: 100px;
+  }
+}
+
