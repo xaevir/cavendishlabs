@@ -23,9 +23,31 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
-if ('development' == app.get('env')) {
+app.configure('development', function(){
+  app.set('port', process.env.PORT || 8090);
   app.use(express.errorHandler());
-}
+  app.locals({
+    env: 'development',
+  });
+});
+
+// production only
+app.configure('production', function(){
+  app.set('port', process.env.PORT || 8090);
+  app.locals({
+    env: 'production',
+  });
+});
+
+// redirect from www
+app.get('/*', function(req, res, next) {
+  if (req.headers.host.match(/^www/) !== null ) {
+    var new_url = 'http://' + req.headers.host.replace(/^www\./, '') + req.url
+    res.redirect(301, new_url);
+  }
+  else next();
+});
+
 
 app.get('/', routes.index);
 app.get('/contact', routes.contact);
