@@ -5,26 +5,18 @@ html(lang="en")
     meta(charset='utf-8')
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel='shortcut icon', href='/img/favicon.ico')
-    title Cavendish Labs Web Services | St. Petersburg, FL
+    if locals.title
+      title #{title} - Cavendish Labs Web Services | St. Petersburg/Treasure Island, FL
+    else
+      title Cavendish Labs Web Services | St. Petersburg/Treasure Island, FL
+    link(rel='stylesheet', href='/css/main.css')
 
     if locals.env === 'production'
-      link(rel='stylesheet', href='/css/main.css')
       script(data-main='js/main-built', src='/js/libs/require.js')
     else
-      link(rel="stylesheet/less", type="text/css", href="/css/main.css")
-      //link(rel='stylesheet', href='/css/main.css')
-      script(src="/js/libs/less.js")
-      script.
-        less.watch()
       script(data-main='js/main', src='/js/libs/require.js')
   body
+    #notification
     block content
-  footer
-    .container
-      a(href="/")
-        img#logo-footer(src="/img/logo-vertical-white.png")
-      .copyright
-        | All rights reserved. 
-        - var year = new Date().getFullYear()
-        | Copyright &copy; #{year} Cavendish Labs Inc.
+    include footer
 

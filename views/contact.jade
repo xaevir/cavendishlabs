@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  #contact
+    .navbar
+      .container
+        .navbar-header
+          button(type="button", class="navbar-toggle", data-toggle="collapse", data-target=".navbar-collapse")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="/")
+            img#logo(src="/img/logo-horizontal-small.png")
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+               a(href="/contact") Contact
+
+    #bd
+      .container
+        h1 We'd love to <br>hear from you
+        section
+          p.bold General Information
+          p.light hello@cavendishlabs.com
+        section._2
+          p.bold Address
+          p.light.
+            450 Treasure Island Cswy <br>
+            Suite 612<br>
+            Treasure Island, FL 33706
+    #form
+      .container
+        h1 Contact Form
+        .contact

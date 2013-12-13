@@ -30,7 +30,8 @@ define(function(require) {
     },
 
     index: function() {
-      $( "#seeOurWork" ).click(function() {
+      $( "#seeOurWork" ).click(function(e) {
+        e.preventDefault();
         var targetDistanceFromTop = $('#featuredworks').offset().top
         $('html, body').animate({
           'scrollTop': targetDistanceFromTop
