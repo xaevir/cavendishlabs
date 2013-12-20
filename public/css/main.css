@@ -6211,6 +6211,7 @@ nav a {
 }
 #home #header .banner-message {
   height: 440px;
+  text-align: center;
 }
 #home #header .banner-message #cl-brand {
   clear: both;
@@ -6237,8 +6238,6 @@ nav a {
 #home #header .banner-message .btn {
   background-color: #27ccff;
   color: #fff;
-  margin: 0 auto;
-  display: block;
   margin-top: 50px;
   padding: 15px 21px;
   font-size: 24px;
