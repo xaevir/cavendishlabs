@@ -6130,6 +6130,21 @@ td.visible-print {
   src: url("/fonts/proximaNovaLight/proximanova-light-webfont.eot");
   src: url("/fonts/proximaNovaLight/proximanova-light-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/proximaNovaLight/proximanova-light-webfont.woff") format('woff'), url("/fonts/proximaNovaLight/proximanova-light-webfont.ttf") format('truetype'), url("/fonts/proximaNovaLight/proximanova-light-webfont.svg#proxima_novalight") format('svg');
 }
+@font-face {
+  font-family: 'codeBold';
+  src: url("/fonts/codeBold/CODE-Bold.eot");
+  src: url("/fonts/codeBold/CODE-Bold.eot?#iefix") format('embedded-opentype'), url("/fonts/codeBold/CODE-Bold.woff") format('woff'), url("/fonts/codeBold/CODE-Bold.ttf") format('truetype'), url("/fonts/codeBold/CODE-Bold.svg#") format('svg');
+}
+@font-face {
+  font-family: 'montserrat';
+  src: url("/fonts/montserrat/montserrat-regular-webfont.eot");
+  src: url("/fonts/montserrat/montserrat-regular-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/montserrat/montserrat-regular-webfont.woff") format('woff'), url("/fonts/montserrat/montserrat-regular-webfont.ttf") format('truetype'), url("/fonts/montserrat/montserrat-regular-webfont.svg#") format('svg');
+}
+@font-face {
+  font-family: 'montserratBold';
+  src: url("/fonts/montserrat/montserrat-bold-webfont.eot");
+  src: url("/fonts/montserrat/montserrat-bold-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/montserrat/montserrat-bold-webfont.woff") format('woff'), url("/fonts/montserrat/montserrat-bold-webfont.ttf") format('truetype'), url("/fonts/montserrat/montserrat-bold-webfont.svg#") format('svg');
+}
 @media (min-width: 1070px) {
   .container {
     max-width: 1050px;
@@ -6138,6 +6153,9 @@ td.visible-print {
 /* ==========================================================================
    Base tags 
    ========================================================================== */
+html {
+  height: 100%;
+}
 h1,
 h2,
 h3,
@@ -6149,6 +6167,10 @@ h6 {
 }
 body {
   font-family: proximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+.container {
+  height: 100%;
 }
 nav:before,
 nav:after {
@@ -6185,41 +6207,39 @@ nav li {
 nav a {
   text-transform: uppercase;
 }
-#home #header {
-  height: 500px;
-  background: url('/img/bg.jpg') no-repeat top left;
+#home-header {
+  height: 100%;
+  background: url('/img/knockout.jpg') no-repeat top left;
   background-size: cover;
 }
-#home #header .container {
-  height: 100%;
-}
-#home #header nav {
+#home-header nav {
   padding-top: 20px;
   height: 60px;
 }
-#home #header nav #logo-white {
+#home-header nav #logo-white {
   float: left;
   width: 160px;
   background: rgba(39, 204, 255, 0.5);
   padding: 7px 10px;
 }
-#home #header nav ul {
+#home-header nav ul {
   margin-top: 8px;
 }
-#home #header nav a {
+#home-header nav a {
   color: #fff;
 }
-#home #header .banner-message {
+#home-header .banner-message {
   height: 440px;
   text-align: center;
 }
-#home #header .banner-message #cl-brand {
+#home-header .banner-message #cl-brand {
   clear: both;
   display: block;
   margin: 0 auto;
   margin-top: 25px;
 }
-#home #header .banner-message h1 {
+#home-header .banner-message h1 {
+  font-family: 'montserratBold';
   color: #27ccff;
   color: #fff;
   text-align: center;
@@ -6230,12 +6250,16 @@ nav a {
   margin-top: 50px;
   text-shadow: 1px 1px #000;
 }
+#home-header .banner-message h1 span {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 5px;
+}
 @media (max-width: 768px) {
-  #home #header .banner-message h1 {
+  #home-header .banner-message h1 {
     font-size: 30px;
   }
 }
-#home #header .banner-message .btn {
+#home-header .banner-message .btn {
   background-color: #27ccff;
   color: #fff;
   margin-top: 50px;
@@ -6243,16 +6267,16 @@ nav a {
   font-size: 24px;
   border: #27ccff;
 }
-#home #header .banner-message .btn:hover {
+#home-header .banner-message .btn:hover {
   background-color: #fff;
   color: #27ccff;
 }
-#home #bd h1 {
+#home-body h1 {
   font-family: proximaNovaLight, sans-serif;
   text-transform: uppercase;
   text-align: center;
 }
-#home #bd h1 span.border {
+#home-body h1 span.border {
   width: 100px;
   height: 3px;
   background: #27ccff;
@@ -6261,55 +6285,55 @@ nav a {
   margin-top: 10px;
   margin-bottom: 30px;
 }
-#home #bd p {
+#home-body p {
   font-size: 18px;
   font-family: proximaNovaLight, sans-serif;
 }
-#home #bd section {
+#home-body section {
   padding: 80px 0;
 }
-#home #whatwedo {
+#home-body #whatwedo {
   background: url('/img/hand-dark.jpg') no-repeat center bottom;
   background-size: cover;
 }
-#home #whatwedo h1 {
+#home-body #whatwedo h1 {
   color: #fff;
 }
-#home #whatwedo .col img {
+#home-body #whatwedo .col img {
   display: block;
   margin: 0 auto;
 }
-#home #whatwedo .col h2 {
+#home-body #whatwedo .col h2 {
   color: #fff;
   font-size: 20px;
   text-align: center;
 }
-#home #whatwedo .col p {
+#home-body #whatwedo .col p {
   color: #fff;
   text-align: center;
 }
 @media (max-width: 768px) {
-  #home #whatwedo .col {
+  #home-body #whatwedo .col {
     margin-bottom: 50px;
   }
 }
-#home #featuredworks h1 {
+#home-body #featuredworks h1 {
   margin-bottom: 70px;
 }
-#home #featuredworks img {
+#home-body #featuredworks img {
   width: 100%;
 }
-#home #featuredworks .col-md-6 {
+#home-body #featuredworks .col-md-6 {
   margin-bottom: 50px;
 }
-#home #contact-us {
+#home-body #contact-us {
   background: #27ccff;
   color: #fff;
 }
-#home #contact-us p {
+#home-body #contact-us p {
   text-align: center;
 }
-#home #contact-us .btn {
+#home-body #contact-us .btn {
   background-color: #27ccff;
   color: #fff;
   margin: 0 auto;
@@ -6318,7 +6342,7 @@ nav a {
   font-size: 24px;
   border: 1px solid #fff;
 }
-#home #contact-us .btn:hover {
+#home-body #contact-us .btn:hover {
   background-color: #fff;
   color: #27ccff;
 }

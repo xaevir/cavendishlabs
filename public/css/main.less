@@ -15,6 +15,10 @@
    Base tags 
    ========================================================================== */
 
+html {
+  height: 100%;
+}
+
 h1, h2, h3, h4, h5, h6  {
   font-family: proximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -22,6 +26,12 @@ h1, h2, h3, h4, h5, h6  {
 
 body {
   font-family: proximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+// for cascading height
+.container {
+  height: 100%;
 }
 
 @cavendishBlue: #27ccff;
@@ -41,96 +51,98 @@ nav {
   }
 }
 
+// cascade height
 
-#home {
-  #header {
-    height: 500px;
-    background: url('/img/bg.jpg') no-repeat top left;
-    background-size: cover;
-    .container {
-      height: 100%;
-    }
-    nav {
-      padding-top: 20px;
-      height: 60px;
-      #logo-white {
-        float: left;
-        width: 160px;
-        background: rgba(39,204,255, .5);
-        padding: 7px 10px;
-      }
-      ul {
-        margin-top: 8px;
-      }
-      a {
-        color: #fff;
-      }
-    }
-    .banner-message {
-      height: 440px;
-      text-align: center;
-      #cl-brand {
-        clear: both;
-        display: block;
-        margin: 0 auto;
-        margin-top: 25px;
-      }
-      h1 {
-        color: @cavendishBlue;
-        color: #fff;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 50px;
-        clear: both;
-        margin: 0 auto;
-        margin-top: 50px;
-        text-shadow: 1px 1px #000;
-      }
-      @media (max-width: 768px) { //meaning 0-768
-        h1 {
-          font-size: 30px;
-        }
-      }
-      .btn {
-        background-color: @cavendishBlue;
-        color: #fff;
-        margin-top: 50px;
-        padding: 15px 21px;
-        font-size: 24px;
-        border: @cavendishBlue;
-        &:hover {
-          background-color: #fff;
-          color: @cavendishBlue;
-        }
-      }
-    }
 
+#home-header {
+  height: 100%;
+  background: url('/img/knockout.jpg') no-repeat top left;
+  background-size: cover;
+  nav {
+    padding-top: 20px;
+    height: 60px;
+    #logo-white {
+      float: left;
+      width: 160px;
+      background: rgba(39,204,255, .5);
+      padding: 7px 10px;
+    }
+    ul {
+      margin-top: 8px;
+    }
+    a {
+      color: #fff;
+    }
   }
-  #bd {
+  .banner-message {
+    height: 440px;
+    text-align: center;
+    #cl-brand {
+      clear: both;
+      display: block;
+      margin: 0 auto;
+      margin-top: 25px;
+    }
     h1 {
-      font-family: proximaNovaLight, sans-serif;
-      text-transform: uppercase;
+      //font-family: 'montserrat';
+      //font-family: 'codeBold';
+      font-family: 'montserratBold';
+      color: @cavendishBlue;
+      color: #fff;
       text-align: center;
-      span.border {
-        width: 100px;
-        height: 3px;
-        background: @cavendishBlue;
-        display: block;
-        margin: 0 auto;
-        margin-top: 10px;
-        margin-bottom: 30px;
+      text-transform: uppercase;
+      font-size: 50px;
+      clear: both;
+      margin: 0 auto;
+      margin-top: 50px;
+      text-shadow: 1px 1px #000;
+      span {
+        background: rgba(0,0,0, .5);
+        padding: 0 5px;
       }
     }
-    p {
-      font-size: 18px;
-      font-family: proximaNovaLight, sans-serif;
+    @media (max-width: 768px) { //meaning 0-768
+      h1 {
+        font-size: 30px;
+      }
     }
-    section {
-      padding: 80px 0;
+    .btn {
+      background-color: @cavendishBlue;
+      color: #fff;
+      margin-top: 50px;
+      padding: 15px 21px;
+      font-size: 24px;
+      border: @cavendishBlue;
+      &:hover {
+        background-color: #fff;
+        color: @cavendishBlue;
+      }
     }
   }
-  #welcome {
+}
+#home-body {
+  h1 {
+    font-family: proximaNovaLight, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    span.border {
+      width: 100px;
+      height: 3px;
+      background: @cavendishBlue;
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
   }
+  p {
+    font-size: 18px;
+    font-family: proximaNovaLight, sans-serif;
+  }
+  section {
+    padding: 80px 0;
+  }
+  #welcome { }
   #whatwedo {
     background: url('/img/hand-dark.jpg') no-repeat center bottom;
     background-size: cover;
