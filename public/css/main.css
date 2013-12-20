@@ -6150,93 +6150,111 @@ h6 {
 body {
   font-family: proximaNova, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-#home #header {
-  padding-top: 20px;
-  height: 500px;
-  width: 100%;
-  background: url('/img/bg.jpg') no-repeat top left;
+nav:before,
+nav:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
 }
-#home #header ul {
+nav:after {
+  clear: both;
+}
+nav:before,
+nav:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+nav:after {
+  clear: both;
+}
+nav ul {
   float: right;
   list-style: none;
-  margin-top: 8px;
+  padding: 0px;
 }
-#home #header ul:before,
-#home #header ul:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-#home #header ul:after {
-  clear: both;
-}
-#home #header ul:before,
-#home #header ul:after {
-  content: " ";
-  /* 1 */
-
-  display: table;
-  /* 2 */
-
-}
-#home #header ul:after {
-  clear: both;
-}
-#home #header li {
+nav li {
   display: inline-block;
-  margin-right: 20px;
 }
-#home #header li a {
-  color: #fff;
+nav a {
   text-transform: uppercase;
 }
-#home #header h1 {
-  color: #27ccff;
-  color: #fff;
-  font-family: proximaNovaLight;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 38px;
-  clear: both;
-  margin: 0 auto;
-  margin-top: 20px;
+#home #header {
+  height: 500px;
+  background: url('/img/bg.jpg') no-repeat top left;
+  background-size: cover;
 }
-#home #header .btn {
-  background-color: #27ccff;
-  color: #fff;
-  margin: 0 auto;
-  display: block;
-  margin-top: 40px;
-  padding: 15px 21px;
-  font-size: 24px;
-  border: #27ccff;
+#home #header .container {
+  height: 100%;
 }
-#home #header .btn:hover {
-  background-color: #fff;
-  color: #27ccff;
+#home #header nav {
+  padding-top: 20px;
+  height: 60px;
 }
-#home #header #logo-blue {
+#home #header nav #logo-white {
   float: left;
   width: 160px;
   background: rgba(39, 204, 255, 0.5);
   padding: 7px 10px;
 }
-#home #header #logo-cl {
+#home #header nav ul {
+  margin-top: 8px;
+}
+#home #header nav a {
+  color: #fff;
+}
+#home #header .banner-message {
+  height: 440px;
+}
+#home #header .banner-message #cl-brand {
   clear: both;
   display: block;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 25px;
+}
+#home #header .banner-message h1 {
+  color: #27ccff;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  clear: both;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-shadow: 1px 1px #000;
+}
+@media (max-width: 768px) {
+  #home #header .banner-message h1 {
+    font-size: 30px;
+  }
+}
+#home #header .banner-message .btn {
+  background-color: #27ccff;
+  color: #fff;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+  padding: 15px 21px;
+  font-size: 24px;
+  border: #27ccff;
+}
+#home #header .banner-message .btn:hover {
+  background-color: #fff;
+  color: #27ccff;
 }
 #home #bd h1 {
   font-family: proximaNovaLight, sans-serif;
   text-transform: uppercase;
   text-align: center;
 }
-#home #bd h1 .border {
-  width: 10%;
+#home #bd h1 span.border {
+  width: 100px;
   height: 3px;
   background: #27ccff;
   display: block;
@@ -6258,21 +6276,23 @@ body {
 #home #whatwedo h1 {
   color: #fff;
 }
-#home #whatwedo .col-md-3 img {
+#home #whatwedo .col img {
   display: block;
   margin: 0 auto;
 }
-#home #whatwedo .col-md-3 h2 {
+#home #whatwedo .col h2 {
   color: #fff;
   font-size: 20px;
   text-align: center;
 }
-#home #whatwedo .col-md-3 p {
+#home #whatwedo .col p {
   color: #fff;
   text-align: center;
 }
-#home #featuredworks {
-  margin-bottom: 70px;
+@media (max-width: 768px) {
+  #home #whatwedo .col {
+    margin-bottom: 50px;
+  }
 }
 #home #featuredworks h1 {
   margin-bottom: 70px;
@@ -6280,8 +6300,8 @@ body {
 #home #featuredworks img {
   width: 100%;
 }
-#home #featuredworks ._2 {
-  margin-top: 50px;
+#home #featuredworks .col-md-6 {
+  margin-bottom: 50px;
 }
 #home #contact-us {
   background: #27ccff;
@@ -6322,14 +6342,35 @@ body {
   color: #27ccff;
   text-transform: uppercase;
 }
+#contact nav {
+  min-height: 50px;
+}
+#contact nav .brand {
+  margin-top: 6px;
+  display: inline-block;
+}
+#contact nav .brand #logo {
+  width: 175px;
+}
+#contact nav li {
+  margin-top: 14px;
+}
+#contact nav li a {
+  color: #27ccff;
+}
 #contact #bd {
   background: url('/img/beach.jpg') no-repeat center center;
   height: 500px;
 }
-@media (min-width: 1070px) {
-  #contact #bd .container {
-    max-width: 700px;
-    background: rgba(39, 204, 255, 0.9);
+#contact #bd .container {
+  background: rgba(39, 204, 255, 0.9);
+}
+#contact #bd .container {
+  max-width: 700px;
+}
+@media (max-width: 768px) {
+  #contact #bd h1 {
+    font-size: 40px;
   }
 }
 #contact #bd section {
@@ -6361,12 +6402,13 @@ body {
 #contact #form {
   background: #f7f7f7;
 }
+#contact #form .container {
+  max-width: 500px;
+  background: #fff;
+  padding: 50px;
+}
 @media (min-width: 1070px) {
-  #contact #form .container {
-    max-width: 500px;
-    background: #fff;
-    padding: 50px;
-  }
+  
 }
 form span.error {
   color: #b94a48;
