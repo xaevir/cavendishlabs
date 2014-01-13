@@ -8,6 +8,8 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var nodemailer = require("nodemailer");
+var smtpTransport = nodemailer.createTransport("SMTP", {host: "localhost"})
 
 var app = express();
 
